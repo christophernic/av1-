@@ -1,0 +1,99 @@
+{
+  "carros": [
+    {
+      "id": 1,
+      "marca": "Lamborghini",
+      "pais": "Itália"
+    },
+    {
+      "id": 2,
+      "marca": "Lancia",
+      "pais": "Itália"
+    },
+    {
+      "id": 3,
+      "marca": "Land Rover",
+      "pais": "Reino Unido"
+    },
+    {
+      "id": 4,
+      "marca": "Landwind",
+      "pais": "China"
+    },
+    {
+      "id": 5,
+      "marca": "Leapmotor",
+      "pais": "China"
+    },
+    {
+      "id": 6,
+      "marca": "Levc",
+      "pais": "Reino Unido"
+    },
+    {
+      "id": 7,
+      "marca": "Lexus",
+      "pais": "Japão"
+    },
+    {
+      "id": 8,
+      "marca": "Liebao Motor",
+      "pais": "China"
+    },
+    {
+      "id": 9,
+      "marca": "Lifan",
+      "pais": "China"
+    },
+    {
+      "id": 10,
+      "marca": "Ligier",
+      "pais": "França"
+    },
+    {
+      "id": 11,
+      "marca": "Lincoln",
+      "pais": "Estados Unidos"
+    },
+    {
+      "id": 12,
+      "marca": "Lingxi",
+      "pais": "China"
+    },
+    {
+      "id": 13,
+      "marca": "Livan",
+      "pais": "Rússia"
+    },
+    {
+      "id": 14,
+      "marca": "Lixiang",
+      "pais": "China"
+    },
+    {
+      "id": 15,
+      "marca": "Logem",
+      "pais": "China"
+    },
+    {
+      "id": 16,
+      "marca": "Lotus",
+      "pais": "Reino Unido"
+    },
+    {
+      "id": 17,
+      "marca": "Lti",
+      "pais": "Reino Unido"
+    },
+    {
+      "id": 18,
+      "marca": "Luaz",
+      "pais": "Rússia"
+    },
+    {
+      "id": 19,
+      "marca": "Lucid",
+      "pais": "Estados Unidos"
+    }
+  ]
+}
