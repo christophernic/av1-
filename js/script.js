@@ -13,27 +13,43 @@ async function carregarMarcas() {
         errorDiv.classList.add('d-none');
         contentDiv.classList.add('d-none');
 
-        // Fazer requisição fetch
-        const response = await fetch('data.json');
+        // Array de carros para buscar
+        const carros = [
+            { make: 'audi', model: 'a4' },
+            { make: 'bmw', model: '3 series' },
+            { make: 'honda', model: 'accord' },
+            { make: 'toyota', model: 'corolla' },
+            { make: 'mercedes-benz', model: 'e-class' }
+        ];
 
-        // Tratar erros de requisição
-        if (!response.ok) {
-            throw new Error(`Erro HTTP: ${response.status}`);
+        const todos = [];
+
+        // Fazer requisições para cada carro
+        for (const carro of carros) {
+            const url = `https://api.api-ninjas.com/v1/cars?make=${carro.make}&model=${carro.model}`;
+            const response = await fetch(url, {
+                headers: {
+                    'X-Api-Key': '3dLo210MkxPU5jNj65B0NOkZpNcspFgkoNgvQ8m9'
+                }
+            });
+
+            if (response.ok) {
+                const dados = await response.json();
+                if (Array.isArray(dados) && dados.length > 0) {
+                    todos.push(...dados);
+                }
+            }
         }
 
-        // Converter resposta para JSON
-        const dados = await response.json();
-
-        // Validar dados
-        if (!dados.carros || !Array.isArray(dados.carros)) {
-            throw new Error('Formato de dados inválido');
+        if (todos.length === 0) {
+            throw new Error('Nenhum carro encontrado');
         }
 
         // Limpar container
         carsContainer.innerHTML = '';
 
         // Exibir dados dinamicamente no DOM
-        dados.carros.forEach(carro => {
+        todos.forEach(carro => {
             const card = criarCard(carro);
             carsContainer.appendChild(card);
         });
@@ -64,25 +80,30 @@ function criarCard(carro) {
     const cardBody = document.createElement('div');
     cardBody.className = 'card-body car-card-body';
 
-    // ID
-    const idElement = document.createElement('small');
-    idElement.className = 'car-card-id';
-    idElement.textContent = `#${carro.id}`;
+    // Ano
+    if (carro.year) {
+        const yearElement = document.createElement('small');
+        yearElement.className = 'car-card-id';
+        yearElement.textContent = `📅 ${carro.year}`;
+        cardBody.appendChild(yearElement);
+    }
 
     // Marca
     const marcaElement = document.createElement('h5');
     marcaElement.className = 'car-card-mark';
-    marcaElement.textContent = carro.marca;
-
-    // País
-    const paisElement = document.createElement('p');
-    paisElement.className = 'car-card-country';
-    paisElement.textContent = `🌍 ${carro.pais}`;
-
-    // Montar estrutura
-    cardBody.appendChild(idElement);
+    marcaElement.textContent = `${carro.make} ${carro.model}`;
     cardBody.appendChild(marcaElement);
-    cardBody.appendChild(paisElement);
+
+    // Informações adicionais
+    const infoElement = document.createElement('p');
+    infoElement.className = 'car-card-country';
+    const info = [];
+    if (carro.class) info.push(carro.class);
+    if (carro.fuel_type) info.push(`⛽ ${carro.fuel_type}`);
+    if (carro.city_mpg) info.push(`🏙️ ${carro.city_mpg} mpg`);
+    infoElement.textContent = info.join(' | ');
+    cardBody.appendChild(infoElement);
+
     card.appendChild(cardBody);
     col.appendChild(card);
 

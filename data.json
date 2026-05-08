@@ -1,99 +1,72 @@
-{
-  "carros": [
-    {
-      "id": 1,
-      "marca": "Lamborghini",
-      "pais": "Itália"
-    },
-    {
-      "id": 2,
-      "marca": "Lancia",
-      "pais": "Itália"
-    },
-    {
-      "id": 3,
-      "marca": "Land Rover",
-      "pais": "Reino Unido"
-    },
-    {
-      "id": 4,
-      "marca": "Landwind",
-      "pais": "China"
-    },
-    {
-      "id": 5,
-      "marca": "Leapmotor",
-      "pais": "China"
-    },
-    {
-      "id": 6,
-      "marca": "Levc",
-      "pais": "Reino Unido"
-    },
-    {
-      "id": 7,
-      "marca": "Lexus",
-      "pais": "Japão"
-    },
-    {
-      "id": 8,
-      "marca": "Liebao Motor",
-      "pais": "China"
-    },
-    {
-      "id": 9,
-      "marca": "Lifan",
-      "pais": "China"
-    },
-    {
-      "id": 10,
-      "marca": "Ligier",
-      "pais": "França"
-    },
-    {
-      "id": 11,
-      "marca": "Lincoln",
-      "pais": "Estados Unidos"
-    },
-    {
-      "id": 12,
-      "marca": "Lingxi",
-      "pais": "China"
-    },
-    {
-      "id": 13,
-      "marca": "Livan",
-      "pais": "Rússia"
-    },
-    {
-      "id": 14,
-      "marca": "Lixiang",
-      "pais": "China"
-    },
-    {
-      "id": 15,
-      "marca": "Logem",
-      "pais": "China"
-    },
-    {
-      "id": 16,
-      "marca": "Lotus",
-      "pais": "Reino Unido"
-    },
-    {
-      "id": 17,
-      "marca": "Lti",
-      "pais": "Reino Unido"
-    },
-    {
-      "id": 18,
-      "marca": "Luaz",
-      "pais": "Rússia"
-    },
-    {
-      "id": 19,
-      "marca": "Lucid",
-      "pais": "Estados Unidos"
-    }
-  ]
-}
+[
+  {
+    "city_mpg": 16,
+    "class": "compact car",
+    "combination_mpg": 19,
+    "cylinders": 6,
+    "displacement": 2.8,
+    "drive": "fwd",
+    "fuel_type": "gas",
+    "highway_mpg": 26,
+    "make": "audi",
+    "model": "a4",
+    "transmission": "a",
+    "year": 1996
+  },
+  {
+    "city_mpg": 18,
+    "class": "compact car",
+    "combination_mpg": 21,
+    "cylinders": 4,
+    "displacement": 2.0,
+    "drive": "fwd",
+    "fuel_type": "gas",
+    "highway_mpg": 26,
+    "make": "bmw",
+    "model": "3 series",
+    "transmission": "a",
+    "year": 1998
+  },
+  {
+    "city_mpg": 14,
+    "class": "full-size car",
+    "combination_mpg": 17,
+    "cylinders": 8,
+    "displacement": 5.4,
+    "drive": "rwd",
+    "fuel_type": "gas",
+    "highway_mpg": 22,
+    "make": "mercedes-benz",
+    "model": "e-class",
+    "transmission": "a",
+    "year": 2000
+  },
+  {
+    "city_mpg": 19,
+    "class": "midsize car",
+    "combination_mpg": 22,
+    "cylinders": 4,
+    "displacement": 1.8,
+    "drive": "fwd",
+    "fuel_type": "gas",
+    "highway_mpg": 27,
+    "make": "honda",
+    "model": "accord",
+    "transmission": "a",
+    "year": 1995
+  },
+  {
+    "city_mpg": 20,
+    "class": "compact car",
+    "combination_mpg": 23,
+    "cylinders": 4,
+    "displacement": 1.6,
+    "drive": "fwd",
+    "fuel_type": "gas",
+    "highway_mpg": 28,
+    "make": "toyota",
+    "model": "corolla",
+    "transmission": "m",
+    "year": 1997
+  }
+]
